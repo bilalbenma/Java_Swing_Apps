@@ -1,0 +1,88 @@
+package swing_tuto;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+public class Example01 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) 
+	{
+		EventQueue.invokeLater(new Runnable() 
+		{
+			public void run() 
+			{
+				try 
+				{
+					Example01 frame = new Example01();
+					frame.setVisible(true);
+				} 
+				
+				catch (Exception e) 
+				{
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Example01() 
+	{
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		placeComponents(contentPane);
+		setContentPane(contentPane);
+		
+		
+		
+		
+	}
+	
+
+	
+	private static void placeComponents(JPanel panel)
+	{
+		panel.setLayout(null);
+		
+		JLabel userLabel= new JLabel("User");
+		userLabel.setBounds(10, 20, 80, 25);
+		panel.add(userLabel);
+		
+		
+		JTextField userText= new JTextField(20);
+		userText.setBounds(100, 20, 165, 25);
+		panel.add(userText);
+		
+		
+		JLabel passwordLabel = new JLabel("password");
+		passwordLabel.setBounds(10, 50, 80,25);
+		panel.add(passwordLabel);
+		
+		JPasswordField passwordText=new JPasswordField(20);
+		passwordText.setBounds(100, 50, 165, 25);
+		panel.add(passwordText);
+		
+		JButton loginButton =new JButton("login");
+		loginButton.setBounds(10,80,80,25);
+		panel.add(loginButton);
+	}
+
+}

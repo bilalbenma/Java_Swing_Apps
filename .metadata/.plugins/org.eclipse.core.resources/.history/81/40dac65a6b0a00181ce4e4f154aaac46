@@ -1,0 +1,71 @@
+package swing_tuto;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JSeparator;
+import javax.swing.JPanel;
+import java.awt.Color;
+
+public class LoginSystem {
+
+	private JFrame frame;
+	private JTextField userTextField;
+	private JTextField passTextField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LoginSystem window = new LoginSystem();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public LoginSystem() {
+		initialize();
+		
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setUndecorated(true);
+		frame.setBounds(100, 100, 450, 369);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel headerPanel = new JPanel();
+		headerPanel.setBackground(new Color(135, 206, 235));
+		headerPanel.setBounds(0, 0, 450, 70);
+		frame.getContentPane().add(headerPanel);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(230, 230, 250));
+		panel.setBounds(0, 69, 450, 300);
+		frame.getContentPane().add(panel);
+		frame.setLocationRelativeTo(null);
+		
+		
+		
+		
+		
+	}
+}

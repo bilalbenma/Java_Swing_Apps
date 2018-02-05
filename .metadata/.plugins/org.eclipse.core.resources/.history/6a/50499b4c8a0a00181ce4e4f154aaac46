@@ -1,0 +1,72 @@
+package swing_tuto;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class Registerwindow {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Registerwindow window = new Registerwindow();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Registerwindow() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 457, 690);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setLayout(null);
+		panel.setBackground(new Color(250, 190, 88));
+		panel.setBounds(0, 0, 441, 53);
+		frame.getContentPane().add(panel);
+		
+		JLabel label = new JLabel("Login Form");
+		label.setForeground(Color.WHITE);
+		label.setFont(new Font("Tahoma", Font.BOLD, 23));
+		label.setBounds(10, 11, 240, 31);
+		panel.add(label);
+		
+		JLabel label_3 = new JLabel("X");
+		label_3.setForeground(Color.WHITE);
+		label_3.setFont(new Font("Tahoma", Font.BOLD, 23));
+		label_3.setBounds(414, 11, 17, 31);
+		panel.add(label_3);
+		
+		JLabel label_4 = new JLabel("-");
+		label_4.setForeground(Color.WHITE);
+		label_4.setFont(new Font("Tahoma", Font.BOLD, 23));
+		label_4.setBounds(387, 11, 17, 31);
+		panel.add(label_4);
+	}
+
+}

@@ -1,0 +1,92 @@
+package swing_tuto;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JSeparator;
+import javax.swing.JPanel;
+import java.awt.Color;
+import java.awt.Font;
+
+public class LoginSystem {
+
+	private JFrame frame;
+	private JTextField userTextField;
+	private JTextField passTextField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LoginSystem window = new LoginSystem();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public LoginSystem() {
+		initialize();
+		
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setUndecorated(true);
+		frame.setBounds(100, 100, 370, 314);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel headerPanel = new JPanel();
+		headerPanel.setBounds(0, 0, 369, 53);
+		headerPanel.setBackground(new Color(135, 206, 235));
+		frame.getContentPane().add(headerPanel);
+		headerPanel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Login Form");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 23));
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setBounds(10, 11, 240, 31);
+		headerPanel.add(lblNewLabel);
+		
+		JLabel lblX = new JLabel("X");
+		lblX.setForeground(Color.WHITE);
+		lblX.setFont(new Font("Tahoma", Font.BOLD, 23));
+		lblX.setBounds(423, 11, 27, 31);
+		headerPanel.add(lblX);
+		
+		JLabel label = new JLabel("-");
+		label.setForeground(Color.WHITE);
+		label.setFont(new Font("Tahoma", Font.BOLD, 23));
+		label.setBounds(396, 11, 17, 31);
+		headerPanel.add(label);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(0, 53, 369, 261);
+		panel.setBackground(new Color(230, 230, 250));
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		frame.setLocationRelativeTo(null); // pour centrer la fenêtre
+		
+		
+		
+		
+		
+	}
+}

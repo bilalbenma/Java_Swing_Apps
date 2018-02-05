@@ -1,0 +1,88 @@
+package swing_tuto;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class Registerwindow {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Registerwindow window = new Registerwindow();
+					window.frame.setVisible(true);
+					window.frame.setLocationRelativeTo(null);
+					window.frame.pack();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Registerwindow() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setUndecorated(true);
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setLayout(null);
+		panel.setBackground(new Color(250, 190, 88));
+		panel.setBounds(0, 0, 380, 53);
+		frame.getContentPane().add(panel);
+		
+		
+		JLabel lblRegister = new JLabel("Register");
+		lblRegister.setForeground(Color.WHITE);
+		lblRegister.setFont(new Font("Tahoma", Font.BOLD, 23));
+		lblRegister.setBounds(10, 11, 240, 31);
+		panel.add(lblRegister);
+		
+		JLabel label_1 = new JLabel("X");
+		label_1.setForeground(Color.WHITE);
+		label_1.setFont(new Font("Tahoma", Font.BOLD, 23));
+		label_1.setBounds(423, 11, 27, 31);
+		panel.add(label_1);
+		
+		JLabel label_2 = new JLabel("-");
+		label_2.setForeground(Color.WHITE);
+		label_2.setFont(new Font("Tahoma", Font.BOLD, 23));
+		label_2.setBounds(396, 11, 17, 31);
+		panel.add(label_2);
+		
+		JLabel label_3 = new JLabel("X");
+		label_3.setForeground(Color.WHITE);
+		label_3.setFont(new Font("Tahoma", Font.BOLD, 23));
+		label_3.setBounds(342, 11, 17, 31);
+		panel.add(label_3);
+		
+		JLabel label_4 = new JLabel("-");
+		label_4.setForeground(Color.WHITE);
+		label_4.setFont(new Font("Tahoma", Font.BOLD, 23));
+		label_4.setBounds(315, 11, 17, 31);
+		panel.add(label_4);
+	}
+
+}
